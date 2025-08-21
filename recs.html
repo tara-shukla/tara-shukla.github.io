@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amita's recs 📌</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .back-link {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-size: 14px;
+            margin-bottom: 40px;
+            display: inline-block;
+        }
+        
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        
+        .section-header {
+            font-size: 1.3em;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: var(--text-primary);
+            cursor: pointer;
+            user-select: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .section-header::before {
+            content: "▼";
+            font-size: 0.8em;
+            transition: transform 0.2s ease;
+            color: var(--text-secondary);
+        }
+        
+        .section-header.collapsed::before {
+            transform: rotate(-90deg);
+        }
+        
+        .subsection {
+            margin-bottom: 25px;
+            margin-left: 20px;
+        }
+        
+        .subsection-header {
+            font-size: 1.1em;
+            font-weight: 500;
+            margin-bottom: 10px;
+            color: var(--text-primary);
+            cursor: pointer;
+            user-select: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .subsection-header::before {
+            content: "▶";
+            font-size: 0.7em;
+            transition: transform 0.2s ease;
+            color: var(--text-secondary);
+        }
+        
+        .subsection-header.expanded::before {
+            transform: rotate(90deg);
+        }
+        
+        .recommendation-list {
+            margin-left: 20px;
+        }
+        
+        .recommendation {
+            margin-bottom: 8px;
+            font-size: 15px;
+            line-height: 1.5;
+            color: var(--text-primary);
+        }
+        
+        .recommendation strong {
+            font-weight: 600;
+        }
+        
+        .recommendation .author {
+            color: var(--text-secondary);
+        }
+        
+        .recommendation a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+        
+        .recommendation a:hover {
+            text-decoration: underline;
+        }
+        
+        .section-content {
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .section-content.collapsed {
+            max-height: 0;
+            margin-bottom: 0;
+        }
+        
+        .intro-text {
+            font-size: 16px;
+            color: var(--text-secondary);
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <a href="index.html" class="back-link">← back to main</a>
+            <button class="theme-toggle" onclick="toggleTheme()">
+                <span id="theme-text">Dark</span>
+            </button>
+        </div>
+
+        <div class="profile-section">
+            <h1>recommendations</h1>
+            
+            <div class="intro-text">
+                a non-comprehensive and mostly-evergreen list of favorites.
+            </div>
+
+            <div class="section">
+                <div class="section-header" onclick="toggleSection(this)">reading 🎒</div>
+                <div class="section-content">
+                    <div class="subsection">
+                        <div class="subsection-header" onclick="toggleSubsection(this)">fiction</div>
+                        <div class="recommendation-list" style="display: none;">
+                            <div class="recommendation">• <strong>The Dispossessed</strong> <span class="author">(Ursula K. Le Guin)</span></div>
+                            <div class="recommendation">• <strong>Exhalation</strong> <span class="author">(Ted Chiang)</span></div>
+                            <div class="recommendation">• <strong>The Fifth Season</strong> <span class="author">(N.K. Jemisin)</span></div>
+                            <div class="recommendation">• <strong>Klara and the Sun</strong> <span class="author">(Kazuo Ishiguro)</span></div>
+                            <div class="recommendation">• <strong>East of Eden</strong> <span class="author">(John Steinbeck)</span></div>
+                            <div class="recommendation">• <strong>A Wizard of Earthsea</strong> <span class="author">(Ursula K. LeGuin)</span></div>
+                            <div class="recommendation">• <strong>Homegoing</strong> <span class="author">(Yaa Gyasi)</span></div>
+                            <div class="recommendation">• <strong>Death of a Salesman</strong> <span class="author">(Arthur Miller)</span></div>
+                        </div>
+                    </div>
+                    
+                    <div class="subsection">
+                        <div class="subsection-header expanded" onclick="toggleSubsection(this)">non-fiction</div>
+                        <div class="recommendation-list">
+                            <div class="recommendation">• <strong>A Pattern Language</strong> <span class="author">(Christopher Alexander, Murray Silverstein, and Sara Ishikawa)</span></div>
+                            <div class="recommendation">• <strong>The Art of Doing Science and Engineering</strong> <span class="author">(Richard Hamming)</span></div>
+                            <div class="recommendation">• <strong>Thinking in Bets</strong> <span class="author">(Annie Duke)</span></div>
+                            <div class="recommendation">• <strong>We the Corporations</strong> <span class="author">(Adam Winkler)</span></div>
+                            <div class="recommendation">• <strong>The Abundance</strong> <span class="author">(Annie Dillard)</span></div>
+                            <div class="recommendation">• <strong>Braiding Sweetgrass</strong> <span class="author">(Robin Wall Kimmerer)</span></div>
+                            <div class="recommendation">• <strong>Nabokov's Favorite Word is Mauve</strong> <span class="author">(Ben Blatt)</span></div>
+                            <div class="recommendation">• <strong>An Encyclopedia of Trouble and Spaciousness</strong> <span class="author">(Rebecca Solnit)</span></div>
+                            <div class="recommendation">• <strong>Blockchain Chicken Farm</strong> <span class="author">(Xiaowei Wang)</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-header" onclick="toggleSection(this)">clicking 👾</div>
+                <div class="section-content">
+                    <div class="subsection">
+                        <div class="subsection-header" onclick="toggleSubsection(this)">essays</div>
+                        <div class="recommendation-list" style="display: none;">
+                            <div class="recommendation">• <a href="https://rawandferal.substack.com/p/cooking-up-mehrans-steak-house"><strong>Cooking Up Mehran's Steak House</strong></a> <span class="author">(raw and feral)</span></div>
+                            <div class="recommendation">• <a href="https://joincolossus.com/article/flounder-mode/"><strong>Flounder Mode</strong></a> <span class="author">(Brie Wolfson)</span></div>
+                            <div class="recommendation">• <a href="https://www.benkuhn.net/abyss/"><strong>Staring into the Abyss as a Life Skill</strong></a> <span class="author">(Ben Kuhn)</span></div>
+                            <div class="recommendation">• <a href="https://www.experimental-history.com/p/so-you-wanna-de-bog-yourself"><strong>So You Wanna De-Bog Yourself</strong></a> <span class="author">(Adam Mastrioanni)</span></div>
+                        </div>
+                    </div>
+                    <div class="subsection">
+                        <div class="subsection-header" onclick="toggleSubsection(this)">interactives</div>
+                        <div class="recommendation-list" style="display: none;">
+                            <div class="recommendation">• <a href="https://inclusive-components.design/"><strong>Inclusive Components</strong></a> <span class="author">(Heydon Pickering)</span></div>
+                            <div class="recommendation">• <a href="https://onemillioncheckboxes.com/"><strong>One Million Checkboxes</strong></a> <span class="author">(EIEIO)</span></div>
+                            <div class="recommendation">• <a href="https://distill.pub/2018/building-blocks/"><strong>The Building Blocks of Interpretability</strong></a> <span class="author">(Chris Olah et al.)</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-header" onclick="toggleSection(this)">watching 🛋️</div>
+                <div class="section-content">
+                    <div class="subsection">
+                        <div class="subsection-header" onclick="toggleSubsection(this)">shows</div>
+                        <div class="recommendation-list" style="display: none;">
+                            <div class="recommendation">• <strong>Murderbot</strong></div>
+                            <div class="recommendation">• <strong>Department Q</strong></div>
+                            <div class="recommendation">• <strong>The Sandman</strong></div>
+                            <div class="recommendation">• <strong>Blue Eyed Samurai</strong></div>
+                            <div class="recommendation">• <strong>The Good Place</strong></div>
+                            <div class="recommendation">• <strong>Shrinking</strong></div>
+                        </div>
+                        <div class="subsection">
+                            <div class="subsection-header" onclick="toggleSubsection(this)">movies</div>
+                            <div class="recommendation-list" style="display: none;">
+                                <div class="recommendation">• <strong>arrival</strong></div>
+                                <div class="recommendation">• <strong>Department Q</strong></div>
+                                <div class="recommendation">• <strong>The Sandman</strong></div>
+                                <div class="recommendation">• <strong>Blue Eyed Samurai</strong></div>
+                                <div class="recommendation">• <strong>The Good Place</strong></div>
+                                <div class="recommendation">• <strong>Shrinking</strong></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            © 2025 Amita Shukla
+        </div>
+    </div>
+
+    <script>
+        function toggleSection(header) {
+            const content = header.nextElementSibling;
+            const isCollapsed = content.classList.contains('collapsed');
+            
+            if (isCollapsed) {
+                content.classList.remove('collapsed');
+                header.classList.remove('collapsed');
+            } else {
+                content.classList.add('collapsed');
+                header.classList.add('collapsed');
+            }
+        }
+        
+        function toggleSubsection(header) {
+            const list = header.nextElementSibling;
+            const isVisible = list.style.display !== 'none';
+            
+            if (isVisible) {
+                list.style.display = 'none';
+                header.classList.remove('expanded');
+            } else {
+                list.style.display = 'block';
+                header.classList.add('expanded');
+            }
+        }
+
+        function toggleTheme() {
+            const body = document.body;
+            const themeText = document.getElementById('theme-text');
+            
+            if (body.getAttribute('data-theme') === 'dark') {
+                body.removeAttribute('data-theme');
+                themeText.textContent = 'Dark';
+                localStorage.setItem('theme', 'light');
+            } else {
+                body.setAttribute('data-theme', 'dark');
+                themeText.textContent = 'Light';
+                localStorage.setItem('theme', 'dark');
+            }
+        }
+
+        // Load saved theme
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            document.body.setAttribute('data-theme', 'dark');
+            document.getElementById('theme-text').textContent = 'Light';
+        }
+    </script>
+</body>
+</html>
