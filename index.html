@@ -371,6 +371,43 @@
             document.body.setAttribute('data-theme', 'dark');
             document.getElementById('theme-text').textContent = '☀️ Light';
         }
+
+        // Header scroll effects
+        const header = document.querySelector('.header');
+        let lastScrollY = window.scrollY;
+
+        window.addEventListener('scroll', () => {
+            const currentScrollY = window.scrollY;
+            
+            // Add scrolled class for enhanced styling
+            if (currentScrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+
+            // Hide/show header on scroll (optional effect)
+            if (currentScrollY > lastScrollY && currentScrollY > 100) {
+                header.style.transform = 'translateY(-100%)';
+            } else {
+                header.style.transform = 'translateY(0)';
+            }
+            
+            lastScrollY = currentScrollY;
+        });
+
+        // Smooth reveal animation for header elements
+        const headerElements = document.querySelectorAll('.nav-menu, .theme-toggle');
+        headerElements.forEach((element, index) => {
+            element.style.opacity = '0';
+            element.style.transform = 'translateY(-20px)';
+            
+            setTimeout(() => {
+                element.style.transition = 'all 0.6s ease';
+                element.style.opacity = '1';
+                element.style.transform = 'translateY(0)';
+            }, 200 + (index * 100));
+        });
     </script>
 </body>
 </html>
