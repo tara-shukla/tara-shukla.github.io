@@ -279,6 +279,76 @@ h1 {
     text-align: left;
 }
 
+.interests-section {
+    margin-bottom: 30px;
+}
+
+.interests-section h3 {
+    font-size: 1.1em;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.interests-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.interests-list li {
+    color: var(--text-secondary);
+    font-size: 15px;
+    margin-bottom: 6px;
+    padding-left: 0;
+    position: relative;
+}
+
+.interests-list li::before {
+    content: '•';
+    color: var(--accent-color);
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+.education-section {
+    margin-bottom: 30px;
+}
+
+.education-section h3 {
+    font-size: 1.1em;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.education-item {
+    margin-bottom: 16px;
+}
+
+.degree {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+}
+
+.school {
+    font-size: 15px;
+    color: var(--text-secondary);
+    margin-bottom: 2px;
+}
+
+.year {
+    font-size: 14px;
+    color: var(--text-muted);
+    font-style: italic;
+}
+
 .tags {
     display: flex;
     flex-wrap: wrap;
@@ -626,6 +696,23 @@ h1 {
     }
 
     h1, .title, .bio, .contact-info {
+        text-align: center;
+    }
+
+    .interests-section h3,
+    .education-section h3 {
+        text-align: center;
+    }
+
+    .interests-list {
+        text-align: center;
+    }
+
+    .interests-list li::before {
+        margin-right: 6px;
+    }
+
+    .education-item {
         text-align: center;
     }
 
