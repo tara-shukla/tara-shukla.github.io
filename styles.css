@@ -279,8 +279,14 @@ h1 {
     text-align: left;
 }
 
-.interests-section {
+.info-sections {
+    display: flex;
+    gap: 60px;
     margin-bottom: 30px;
+}
+
+.interests-section {
+    flex: 1;
 }
 
 .interests-section h3 {
@@ -314,7 +320,7 @@ h1 {
 }
 
 .education-section {
-    margin-bottom: 30px;
+    flex: 1;
 }
 
 .education-section h3 {
@@ -696,6 +702,12 @@ h1 {
     }
 
     h1, .title, .bio, .contact-info {
+        text-align: center;
+    }
+
+    .info-sections {
+        flex-direction: column;
+        gap: 30px;
         text-align: center;
     }
 
