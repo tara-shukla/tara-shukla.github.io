@@ -198,10 +198,10 @@ body {
 }
 
 .profile-section {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     display: flex;
     align-items: flex-start;
-    gap: 80px;
+    gap: 60px;
     max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
@@ -209,7 +209,7 @@ body {
 
 .profile-left {
     flex-shrink: 0;
-    width: 300px;
+    width: 320px;
     text-align: center;
 }
 
@@ -219,9 +219,9 @@ body {
 }
 
 .headshot {
-    width: 240px;
-    height: 240px;
-    margin: 0 auto 30px;
+    width: 280px;
+    height: 280px;
+    margin: 0 auto 20px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -245,7 +245,7 @@ body {
 h1 {
     font-size: 2.2em;
     font-weight: 600;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
     color: var(--text-primary);
     text-align: center;
 }
@@ -253,7 +253,7 @@ h1 {
 .title {
     font-size: 1.1em;
     color: var(--text-secondary);
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     font-weight: 400;
     text-align: center;
 }
@@ -262,7 +262,7 @@ h1 {
     font-size: 16px;
     line-height: 1.7;
     color: var(--text-primary);
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     text-align: left;
 }
 
@@ -276,7 +276,7 @@ h1 {
 }
 
 .contact-info {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     font-size: 15px;
     color: var(--text-secondary);
     text-align: center;
@@ -285,8 +285,8 @@ h1 {
 .social-links {
     display: flex;
     justify-content: center;
-    gap: 20px;
-    margin-bottom: 20px;
+    gap: 15px;
+    margin-bottom: 15px;
 }
 
 .social-icon {
@@ -324,13 +324,14 @@ h1 {
 
 .interests-section {
     flex: 1;
+    margin-bottom: 20px;
 }
 
 .interests-section h3 {
     font-size: 1.1em;
     font-weight: 600;
     color: var(--text-primary);
-    margin-bottom: 12px;
+    margin-bottom: 10px;
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
@@ -344,7 +345,7 @@ h1 {
 .interests-list li {
     color: var(--text-secondary);
     font-size: 15px;
-    margin-bottom: 6px;
+    margin-bottom: 5px;
     padding-left: 0;
     position: relative;
 }
@@ -358,26 +359,27 @@ h1 {
 
 .education-section {
     flex: 1;
+    margin-bottom: 20px;
 }
 
 .education-section h3 {
     font-size: 1.1em;
     font-weight: 600;
     color: var(--text-primary);
-    margin-bottom: 12px;
+    margin-bottom: 10px;
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
 
 .education-item {
-    margin-bottom: 16px;
+    margin-bottom: 12px;
 }
 
 .degree {
     font-size: 16px;
     font-weight: 500;
     color: var(--text-primary);
-    margin-bottom: 4px;
+    margin-bottom: 3px;
 }
 
 .school {
