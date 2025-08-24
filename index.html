@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>🌟 Tara Shukla - Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Roboto+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -15,6 +18,11 @@
                 <a href="#experience" class="nav-link">Experience</a>
                 <a href="#accomplishments" class="nav-link">Accomplishments</a>
             </nav>
+            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()" aria-label="Toggle mobile menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
             <button class="theme-toggle" onclick="toggleTheme()">
                 <span id="theme-text">🌙 Dark</span>
             </button>
@@ -395,6 +403,36 @@
                 localStorage.setItem('theme', 'dark');
             }
         }
+
+        function toggleMobileMenu() {
+            const navMenu = document.querySelector('.nav-menu');
+            const mobileToggle = document.querySelector('.mobile-menu-toggle');
+            
+            navMenu.classList.toggle('mobile-open');
+            mobileToggle.classList.toggle('active');
+        }
+
+        // Close mobile menu when clicking on a nav link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                const navMenu = document.querySelector('.nav-menu');
+                const mobileToggle = document.querySelector('.mobile-menu-toggle');
+                
+                navMenu.classList.remove('mobile-open');
+                mobileToggle.classList.remove('active');
+            });
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            const navMenu = document.querySelector('.nav-menu');
+            const mobileToggle = document.querySelector('.mobile-menu-toggle');
+            
+            if (!navMenu.contains(e.target) && !mobileToggle.contains(e.target) && navMenu.classList.contains('mobile-open')) {
+                navMenu.classList.remove('mobile-open');
+                mobileToggle.classList.remove('active');
+            }
+        });
 
         // Smooth scrolling for navigation
         document.querySelectorAll('.nav-link').forEach(link => {
