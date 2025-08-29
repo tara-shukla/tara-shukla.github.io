@@ -366,11 +366,8 @@ h1 {
 .icon-label {
     display: flex;
     align-items: center;
-    gap: 6px;
+    gap: 3px;
 }
-
-
-
 
 
 
@@ -402,6 +399,8 @@ h1 {
     padding-left: 0;
     position: relative;
 }
+
+
 
 .interests-list li::before {
     content: '•';
