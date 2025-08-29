@@ -30,8 +30,8 @@
 }
 
 body {
-    /* font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', 'Monaco', 'Courier New', monospace; */
-    font-family: "Roboto Slab", "Lora", Georgia, "Times New Roman", serif;
+    font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', 'Monaco', 'Courier New', monospace;
+    /* font-family: "Roboto Slab", "Lora", Georgia, "Times New Roman", serif; */
     line-height: 1.5;
     color: var(--text-primary);
     background-color: var(--bg-color);
@@ -88,6 +88,7 @@ body {
 
 .nav-link {
     font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', 'Source Code Pro', monospace;
+    
     text-decoration: none;
     color: var(--text-secondary);
     font-weight: 500;
@@ -330,7 +331,7 @@ h1 {
     margin-bottom: 20px;
 }
 
-/* ...existing code... */
+
 .social-btn {
     display: inline-flex;
     align-items: center;
@@ -341,8 +342,8 @@ h1 {
     background: var(--hover-bg);
     color: var(--text-primary);
     font-family: 'Roboto', Arial, sans-serif;
-    font-size: 15px;
-    font-weight: 500;
+    font-size: 12px;
+    font-weight: 300;
     text-decoration: none;
     transition: all 0.2s;
     margin: 0 4px 8px 0;
@@ -354,9 +355,10 @@ h1 {
     border-color: var(--accent-color);
     transform: translateY(-2px) scale(1.04);
 }
+
 .social-btn .icon {
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
     fill: currentColor;
     margin-right: 6px;
 }
@@ -365,7 +367,7 @@ h1 {
     align-items: center;
     gap: 6px;
 }
-/*
+
 
 
 
