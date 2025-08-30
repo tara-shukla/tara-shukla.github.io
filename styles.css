@@ -210,7 +210,7 @@ body {
     display: flex;
     align-items: flex-start;
     gap: 10px;
-    max-width: 900px;
+    /* max-width: 900px; */
     margin-left: auto;
     margin-right: auto;
 
