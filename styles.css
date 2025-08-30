@@ -181,7 +181,9 @@ body {
 }
 
 .section-title {
-    font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', 'Source Code Pro', monospace;
+    /* font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', 'Source Code Pro', monospace; */
+    font-family: 'Roboto', Arial, sans-serif;
+
     font-size: 2.2em;
     font-weight: 600;
     margin-bottom: 30px;
@@ -253,7 +255,7 @@ h1 {
     /* font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', 'Source Code Pro', monospace; */
     font-family: 'Roboto', Arial, sans-serif;
     font-size: 2em;
-    font-weight: 600;
+    font-weight: 400;
     margin-bottom: 4px;
     color: var(--text-primary);
     text-align: center;
@@ -975,7 +977,7 @@ h1 {
 
     .section-title {
         font-family: 'Roboto', Arial, sans-serif;
-        font-weight: 700;
+        font-weight: 600;
         font-size: 2em;
     }
 
