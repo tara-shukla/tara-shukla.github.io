@@ -258,7 +258,7 @@ h1 {
     /* font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', 'Source Code Pro', monospace; */
     font-family: 'Roboto', Arial, sans-serif;
     font-size: 2em;
-    font-weight: 400;
+    font-weight: 500;
     margin-bottom: 4px;
     color: var(--text-primary);
     text-align: center;
@@ -269,7 +269,7 @@ h1 {
     font-size: 1em;
     color: var(--text-secondary);
     margin-bottom: 12px;
-    font-weight: 400;
+    font-weight: 500;
     text-align: center;
 }
 
@@ -539,7 +539,7 @@ h1 {
 }
 
 .project-placeholder {
-    font-size: 4em;
+    font-size: 3em;
     color: var(--text-muted);
 }
 
@@ -549,7 +549,7 @@ h1 {
 
 .project-content h3 {
     font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', 'Source Code Pro', monospace;
-    font-size: 1.2em;
+    font-size: 1em;
     margin-bottom: 10px;
     color: var(--text-primary);
     letter-spacing: -0.01em;
@@ -559,7 +559,7 @@ h1 {
     color: var(--text-secondary);
     margin-bottom: 16px;
     line-height: 1.5;
-    font-size: 13px;
+    font-size: 12px;
 }
 
 .project-tech {
@@ -980,7 +980,7 @@ h1 {
 
     .section-title {
         font-family: 'Roboto', Arial, sans-serif;
-        font-weight: 600;
+        font-weight: 500;
         font-size: 2em;
     }
 
