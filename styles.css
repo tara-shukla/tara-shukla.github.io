@@ -825,7 +825,7 @@ h1 {
 
     .info-sections {
         flex-direction: column;
-        gap: 30px;
+        gap: 15px;
         text-align: center;
     }
 
