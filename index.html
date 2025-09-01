@@ -84,6 +84,10 @@
                     <div class="bio">
                         My interests lie in NLP and machine learning; my research and experience revolve around language modeling, AI interpretability and fairness, and multilingual NLP. 
                     </div>
+
+                    <div class="bio">
+                        In the past, I’ve worked with the Princeton Digital Learning Center on building multilingual educational language models, and was fortunate enough to be advised by Prof. Lydia Liu for my senior thesis on model judgement capability, and Prof. Brian Kernighan for my junior thesis on cross-transfer multilingual LLM learning. I also have experience in product management and full-stack web development. 
+                    </div>
                     
                     <div class="bio">
                         While not working, you can find me hiking or painting!
@@ -247,6 +251,14 @@
                     <div class="project-content">
                         <h3>Senior Thesis: LLM Evaluation using Item Response Theory</h3>
                         <p>Leveraging Item Response Theory for Domain-Specific Evaluation of LLMs in Writing Assessment. Researches psychometric statistical evaluation strategies for LLM performance evaluation using cloud computing, transformer models, and Python.</p>
+                        
+                        <button class="read-more-btn" onclick="toggleReadMore(this)">Read more</button>
+                        <div class="project-more" style="display:none;">
+                            <p>
+                                This project explores the application of Item Response Theory (IRT) to evaluate large language models (LLMs) in the context of writing assessment. By leveraging psychometric models, we can better understand the strengths and weaknesses of LLMs across different domains and tasks. The research includes extensive experiments with transformer architectures, statistical analysis, and cloud-based evaluation pipelines.
+                            </p>
+                        </div>
+                        
                         <div class="project-tech">
                             <span class="tech-tag">Python</span>
                             <span class="tech-tag">Item Response Theory</span>
@@ -483,6 +495,17 @@
     </div>
 
     <script>
+        function toggleReadMore(btn) {
+            const more = btn.nextElementSibling;
+            if (more.style.display === "none" || more.style.display === "") {
+                more.style.display = "block";
+                btn.textContent = "Show less";
+            } else {
+                more.style.display = "none";
+                btn.textContent = "Read more";
+            }
+        }
+
         function toggleTheme() {
             const body = document.body;
             const themeText = document.getElementById('theme-text');
