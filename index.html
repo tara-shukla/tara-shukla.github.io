@@ -270,6 +270,7 @@
                         <button class="read-more-btn" onclick="toggleReadMore(this)">Read more</button>
                         <div class="project-more" style="display:none;">
                             <i>LLMs exhibit severe ordering bias when trained on directional facts, e.g. they can answer, “A is B” but fail at the equivalent “B is A.” This is called the reversal curse– model biases in bidirectional knowledge retrieval. </i>
+                            <br>
                             <p>
                             We reproduced and extended the reversal curse of <a href="https://arxiv.org/abs/2309.12288">Burglund, et.al </a> through using synthetic fact datasets and developing various solutions for improving bidirectional knowledge encoding. We designed two data augmentation pipelines: chain-of-thought reasoning prompts that create causal/deductive inference chains, and negation-based contrastive examples that teach models to reject incorrect mappings. We implemented a symmetric contrastive loss function using an InfoNCE objective to align embeddings of fact pairs with their reversed counterparts during fine-tuning.
                             
@@ -285,24 +286,28 @@
                             <span class="tech-tag">PyTorch</span>
                         </div>
                         <div class="project-links">
-                            <a href="src/rev_curse/rev_curse.pdf" class="project-link">Research Paper</a>
-                            <a href="https://github.com/tara-shukla/reversal_curse" class="project-link">GitHub</a>
+                            <a href="src/rev_curse/rev_curse.pdf" target="_blank" class="project-link">Research Paper</a>
+                            <a href="https://github.com/tara-shukla/reversal_curse" target="_blank" class="project-link">GitHub</a>
                         </div>
                     </div>
                 </div>
 
                 <div class="project-card">
                     <div class="project-image">
-                        <div class="project-placeholder">🤖</div>
+                        <img src="src/llm_demo/llm_demo.png" alt="co-occurence bias" style="width:100%;height:auto;border-radius:8px;">
                     </div>
                     <div class="project-content">
-                        <h3>Grading Bias Analysis in LLM Essay Evaluations</h3>
-                        <p>Investigation into algorithmic bias across 5 state-of-the-art LLMs using 25,000+ student essays. Implemented demographic-blind and demographic-aware testing methodologies to evaluate fairness in automated grading systems.</p>
+                        <h3>Evaluating Demographic Bias in LLM-Based Essay Grading</h3>
+                        <p>Investigation into algorithmic bias across 5 LLMs using 25,000+ student essays. Implemented demographic-blind and demographic-aware testing methodologies to evaluate fairness in automated grading systems.</p>
                         
                         <button class="read-more-btn" onclick="toggleReadMore(this)">Read more</button>
                         <div class="project-more" style="display:none;">
+                            <i>
+                                LLMs are being integrated into educational systems for assessing student writing: however, they are not robust against bias in scoring. Without understanding LLM judgment bias, automated essay grading systems can  perpetuate or amplify existing educational inequities based on demographic factors. 
+                            </i>
+                            <br>
                             <p>
-                                This project explores the application of Item Response Theory (IRT) to evaluate large language models (LLMs) in the context of writing assessment. By leveraging psychometric models, we can better understand the strengths and weaknesses of LLMs across different domains and tasks. The research includes extensive experiments with transformer architectures, statistical analysis, and cloud-based evaluation pipelines.
+                                Using the PERSUADE 2.0 dataset with 25,000+ student essays, we evaluated five LLMs for demographic bias through demographic-blind, demographic-aware, and counterfactual analysis approaches across six demographic variables. We found significant biases in four of five models, with score variations up to 1.9 rubric points when demographic information was included. Our counterfactual analysis highlighted that white students' essays consistently received higher scores, while essays by Hispanic/Latino, Black/African American, and Asian/Pacific Islander students experienced significant score decreases under counterfactual conditions. Our findings highlight fairness concerns for AI-powered educational assessment and demonstrate the need for bias detection and mitigation strategies before widespread deployment of LLM graders.
                             </p>
                         </div>
                         
@@ -313,64 +318,72 @@
                             <span class="tech-tag">Bias Detection</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" class="project-link">Research Paper</a>
-                            <a href="#" class="project-link">GitHub</a>
+                            <a href="src/llm_demo/llm_demo.pdf" target="_blank" class="project-link">Research Paper</a>
+                            <a href="https://github.com/tara-shukla/llm_demographic_discrim" target="_blank" class="project-link">GitHub</a>
                         </div>
                     </div>
                 </div>
 
                 <div class="project-card">
                     <div class="project-image">
-                        <div class="project-placeholder">🌐</div>
+                        <img src="src/cross_atn/cross_atn.png" alt="cross-atn" style="width:100%;height:auto;border-radius:8px;">
+                        
                     </div>
                     <div class="project-content">
-                        <h3>Multilingual vs Monolingual Transformer Analysis</h3>
-                        <p>Comparative analysis of multilingual and monolingual transformer models. Implemented experimental setups using Google Colab and Hugging Face libraries, fine-tuned models on GEC datasets, and evaluated performance metrics.</p>
-                        
+                        <h3>Investigating Interpretability Of Cross-Attention in Neural Machine Translation </h3>
+                        <p> Investigates the interpretability of cross-attention mechanisms in neural machine translation models, using traditional MT cross-linguistic alignment as a baseline.</p>
+
                         <button class="read-more-btn" onclick="toggleReadMore(this)">Read more</button>
                         <div class="project-more" style="display:none;">
+                            <i>
+                                The internal decision-making of transformer machine translation (MT) models are not interpretable, making it difficult to understand how models arrive at translations. 
+                            </i>
+                            <br>
                             <p>
-                                This project explores the application of Item Response Theory (IRT) to evaluate large language models (LLMs) in the context of writing assessment. By leveraging psychometric models, we can better understand the strengths and weaknesses of LLMs across different domains and tasks. The research includes extensive experiments with transformer architectures, statistical analysis, and cloud-based evaluation pipelines.
+                                We aimed to enhance understanding of English-French MT by visualizing cross-attention patterns and comparing them to traditional machine translation cross-linguistic alignment strategies. To do so, we built an analysis pipeline to compare attention distributions in a multilingual transformer model, MarianMT,  to linguistic structures like word alignment, part-of-speech patterns, and syntactic dependency. We found that  cross-attention serves as a distributed (rather than concentrated) alignment proxy, and that different attention heads exhibit patterns that correspond to syntactic, contextual, and semantic dependencies. Our work provided insight into how neural MT systems make cross-linguistic connections, contributing to model interpretability and error detection. 
                             </p>
                         </div>
                         
                         <div class="project-tech">
                             <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Hugging Face</span>
-                            <span class="tech-tag">Transformer Models</span>
-                            <span class="tech-tag">Google Colab</span>
+                            <span class="tech-tag">Hugging Face Transformers</span>
+                            <span class="tech-tag">spaCy/NLTK</span>
+                            <span class="tech-tag">Matplotlib</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" class="project-link">Research Paper</a>
-                            <a href="#" class="project-link">GitHub</a>
+                            <a href="src/cross_atn/cross_atn_multi.pdf" target ="_blank" class="project-link">Research Paper</a>
+                            <a href="https://github.com/tara-shukla/cross_atn_mt" target ="_blank" class="project-link">GitHub</a>
                         </div>
                     </div>
                 </div>
 
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="src/compvis/bias_icon.png" alt="co-occurence bias" style="width:100%;height:auto;border-radius:8px;">
+                        <img src="src/junior/junior_thesis.png" alt="co-occurence bias" style="width:100%;height:auto;border-radius:8px;">
                     </div>
                     <div class="project-content">
-                        <h3>Computer Vision Bias Analysis</h3>
-                        <p>Analyzing co-occurrence bias in computer vision object detection. Investigated spurious correlations in COCO dataset using PyTorch and OpenCV, identifying systematic biases affecting model generalization.</p>
+                        <h3>A Comparative Analysis of Multilingual and Monolingual Transformers </h3>
+                        <p>Compares the performance of monolingually vs multilingually pretrained transformers in Korean grammar error correction, providing insights into cross-transfer learning across linguistic domains.</p>
                         
                         <button class="read-more-btn" onclick="toggleReadMore(this)">Read more</button>
                         <div class="project-more" style="display:none;">
+                            <i>
+                                Especially for morphologically complex languages dissimilar to English, there is conflicting evidence on the comparative efficacy of monolingual vs multilingual transformers in language modeling tasks. This study addresses how Transformer model performance varies based on pretraining with single versus multiple source languages for grammar error correction in Korean.
+                            </i>
+                            <br>
                             <p>
-                                This project explores the application of Item Response Theory (IRT) to evaluate large language models (LLMs) in the context of writing assessment. By leveraging psychometric models, we can better understand the strengths and weaknesses of LLMs across different domains and tasks. The research includes extensive experiments with transformer architectures, statistical analysis, and cloud-based evaluation pipelines.
+                                I fine-tuned various pretrained monolingual (KoBART, KoBERT, KoT5) and multilingual (mBART, mT5, M2M) Transformer models, along with a statistical baseline (HANSPELL), on a Korean language learner corpus for Grammar Error Correction (GEC). Using Python, KoNLPy, and KAGAS, I measured performance across M2-scoring (precision, recall, F0.5), BLEU, and GLEU metrics. My research found that overall multilingual models outperformed their monolingual counterparts in overall GEC and individual error classification, and all Transformer models significantly surpassed the statistical baseline. While multilingual models showed greater trainability and higher test set recall, BLEU, and GLEU scores, monolingual models like KoT5 exhibited competitive performance in precision and F0.5, and excelled in specific error types, suggesting their ability to capture nuanced single-language grammar. In general my findings highlight multilingual models' potential for leveraging linguistic diversity in underrepresented languages, but underscores the need for tailored tokenization strategies for morphologically rich languages.
                             </p>
                         </div>
                         
                         <div class="project-tech">
-                            <span class="tech-tag">PyTorch</span>
-                            <span class="tech-tag">OpenCV</span>
-                            <span class="tech-tag">Computer Vision</span>
-                            <span class="tech-tag">Bias Mitigation</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">HuggingFace Transformers</span>
+                            <span class="tech-tag">Multilingual NLP</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" class="project-link">Research Paper</a>
-                            <a href="#" class="project-link">GitHub</a>
+                            <a href="src/junior/junior_thesis.pdf" target="_blank" class="project-link">Research Paper</a>
+                            <a href="https://github.com/tara-shukla/multilingual_crosstransfer_learning" target="_blank" class="project-link">GitHub</a>
                         </div>
                     </div>
                 </div>
@@ -380,87 +393,34 @@
                         <img src="src/compvis/bias_icon.png" alt="co-occurence bias" style="width:100%;height:auto;border-radius:8px;">
                     </div>
                     <div class="project-content">
-                        <h3>Computer Vision Bias Analysis</h3>
+                        <h3>Co-occurence Bias in Object Detection</h3>
                         <p>Analyzing co-occurrence bias in computer vision object detection. Investigated spurious correlations in COCO dataset using PyTorch and OpenCV, identifying systematic biases affecting model generalization.</p>
                         
                         <button class="read-more-btn" onclick="toggleReadMore(this)">Read more</button>
                         <div class="project-more" style="display:none;">
+                            <i>Computer vision models can rely on contextual clues, leading to degraded performance when detecting or classifying objects outside their usual contexts: thus, the presence or absence of commonly co-occurring entities can create bias. </i>
+                            <br>
                             <p>
-                                This project explores the application of Item Response Theory (IRT) to evaluate large language models (LLMs) in the context of writing assessment. By leveraging psychometric models, we can better understand the strengths and weaknesses of LLMs across different domains and tasks. The research includes extensive experiments with transformer architectures, statistical analysis, and cloud-based evaluation pipelines.
+                                We extended Singh et al.'s (2020) contextual bias research to explore whether co-occurrence bias impacts the performance of YOLOv5, an object detection model leveraging locality and bounding boxes. We built data processing pipelines to process images and annotations, identify and isolate object pairs, and create targeted validation sets. We evaluated the model on 125,000+ images via adapting bias metrics for detection tasks. 
+
+                                We found significant co-occurrence biases in the model’s object detection, with some pairs showing up to 2.47x performance degradation. We performed analysis on how object positioning and occlusion patterns can drive these biases; our findings contribute insights for improving detection via dataset curation to mitigate co-occurrence bias. 
                             </p>
                         </div>
                        
                         <div class="project-tech">
                             <span class="tech-tag">PyTorch</span>
                             <span class="tech-tag">OpenCV</span>
+                            <span class="tech-tag">Scikit-learn</span>
                             <span class="tech-tag">Computer Vision</span>
                             <span class="tech-tag">Bias Mitigation</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" class="project-link">Research Paper</a>
-                            <a href="#" class="project-link">GitHub</a>
+                            <a href="src/compvis/obj_det_bias.pdf" target="_blank" class="project-link">Research Paper</a>
+                            <a href="https://github.com/tara-shukla/cv_detection_bias" target="_blank" class="project-link">GitHub</a>
                         </div>
                     </div>
                 </div>
 
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="src/compvis/bias_icon.png" alt="co-occurence bias" style="width:100%;height:auto;border-radius:8px;">
-                    </div>
-                    <div class="project-content">
-                        <h3>Computer Vision Bias Analysis</h3>
-                        <p>Analyzing co-occurrence bias in computer vision object detection. Investigated spurious correlations in COCO dataset using PyTorch and OpenCV, identifying systematic biases affecting model generalization.</p>
-                        
-                        <button class="read-more-btn" onclick="toggleReadMore(this)">Read more</button>
-                        <div class="project-more" style="display:none;">
-                            <p>
-                                This project explores the application of Item Response Theory (IRT) to evaluate large language models (LLMs) in the context of writing assessment. By leveraging psychometric models, we can better understand the strengths and weaknesses of LLMs across different domains and tasks. The research includes extensive experiments with transformer architectures, statistical analysis, and cloud-based evaluation pipelines.
-                            </p>
-                        </div>
-                        
-                        <div class="project-tech">
-                            <span class="tech-tag">PyTorch</span>
-                            <span class="tech-tag">OpenCV</span>
-                            <span class="tech-tag">Computer Vision</span>
-                            <span class="tech-tag">Bias Mitigation</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link">Research Paper</a>
-                            <a href="#" class="project-link">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="src/compvis/bias_icon.png" alt="co-occurence bias" style="width:100%;height:auto;border-radius:8px;">
-                    </div>
-                    <div class="project-content">
-                        <h3>Computer Vision Bias Analysis</h3>
-                        <p>Analyzing co-occurrence bias in computer vision object detection. Investigated spurious correlations in COCO dataset using PyTorch and OpenCV, identifying systematic biases affecting model generalization.</p>
-                        
-                        <button class="read-more-btn" onclick="toggleReadMore(this)">Read more</button>
-                        <div class="project-more" style="display:none;">
-                            <p>
-                                This project explores the application of Item Response Theory (IRT) to evaluate large language models (LLMs) in the context of writing assessment. By leveraging psychometric models, we can better understand the strengths and weaknesses of LLMs across different domains and tasks. The research includes extensive experiments with transformer architectures, statistical analysis, and cloud-based evaluation pipelines.
-                            </p>
-                        </div>
-                        
-                        <div class="project-tech">
-                            <span class="tech-tag">PyTorch</span>
-                            <span class="tech-tag">OpenCV</span>
-                            <span class="tech-tag">Computer Vision</span>
-                            <span class="tech-tag">Bias Mitigation</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link">Research Paper</a>
-                            <a href="#" class="project-link">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
         </section>
 
 
