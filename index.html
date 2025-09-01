@@ -226,7 +226,7 @@
                 
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="src/senior_thesis/senior_thesis.png" alt="llm_judgment" style="width:100%;height:auto;border-radius:8px;">
+                        <img src="src/thesis/senior_thesis.png" alt="llm_judgment" style="width:100%;height:auto;border-radius:8px;">
 
                     </div>
                     <div class="project-content">
@@ -236,6 +236,7 @@
                         <button class="read-more-btn" onclick="toggleReadMore(this)">Read more</button>
                         <div class="project-more" style="display:none;">
                             <i> We rely on LLM judgment capabilities for a range of tasks across different domains, but they show inconsistent ability to evaluate the quality of text inputs. Current static benchmarking methods rely solely on accuracy metrics and are vulnerable to contamination: there’s a critical need for rigorous and interpretable evaluation frameworks for LLMs. </i>
+                            <br>
                             <p>
                                 My research addresses that need through applying a statistical framework called Item Response Theory (IRT) to evaluate LLM judgment capabilities via simultaneously modeling abilities and task difficulty characteristics. I assessed a wide set of models across three benchmark datasets (MT-Bench, JudgeBench, LLMBar) and essay grading tasks, using both pairwise comparative judgment and zero-shot pointwise numerical scoring. 
                                 IRT models (1PL, 2PL, and Graded Response Models) were then applied to analyze performance, estimating latent "judgment capability" (theta), item difficulty, and discrimination.
@@ -252,36 +253,40 @@
                             <span class="tech-tag">LLM Fairness/Efficacy</span>
                         </div>
                         <div class="project-links">
-                            <a href="src/thesis/senior_thesis.pdf" class="project-link">Research Paper</a>
-                            <a href="https://github.com/tara-shukla/llm_judgment" class="project-link">GitHub</a>
+                            <a href="src/thesis/senior_thesis.pdf" target="_blank" class="project-link">Research Paper</a>
+                            <a href="https://github.com/tara-shukla/llm_judgment" target="_blank" class="project-link">GitHub</a>
                         </div>
                     </div>
                 </div>
 
                 <div class="project-card">
                     <div class="project-image">
-                        <div class="project-placeholder">📚</div>
+                        <img src="src/rev_curse/rev_curse.png" alt="co-occurence bias" style="width:100%;height:auto;border-radius:8px;">
                     </div>
                     <div class="project-content">
-                        <h3>Senior Thesis: LLM Evaluation using Item Response Theory</h3>
-                        <p>Leveraging Item Response Theory for Domain-Specific Evaluation of LLMs in Writing Assessment. Researches psychometric statistical evaluation strategies for LLM performance evaluation using cloud computing, transformer models, and Python.</p>
-                        
+                        <h3>Investigating Reversal Generalization in LLMs via Data Augmentation & Contrastive Loss</h3>
+                        <p> We investigated the phenomenon of inconsistent reversal generalization in LLMs by employing data augmentation and contrastive loss.</p>
+
                         <button class="read-more-btn" onclick="toggleReadMore(this)">Read more</button>
                         <div class="project-more" style="display:none;">
+                            <i>LLMs exhibit severe ordering bias when trained on directional facts, e.g. they can answer, “A is B” but fail at the equivalent “B is A.” This is called the reversal curse– model biases in bidirectional knowledge retrieval. </i>
                             <p>
-                                This project explores the application of Item Response Theory (IRT) to evaluate large language models (LLMs) in the context of writing assessment. By leveraging psychometric models, we can better understand the strengths and weaknesses of LLMs across different domains and tasks. The research includes extensive experiments with transformer architectures, statistical analysis, and cloud-based evaluation pipelines.
+                            We reproduced and extended the reversal curse of <a href="https://arxiv.org/abs/2309.12288">Burglund, et.al </a> through using synthetic fact datasets and developing various solutions for improving bidirectional knowledge encoding. We designed two data augmentation pipelines: chain-of-thought reasoning prompts that create causal/deductive inference chains, and negation-based contrastive examples that teach models to reject incorrect mappings. We implemented a symmetric contrastive loss function using an InfoNCE objective to align embeddings of fact pairs with their reversed counterparts during fine-tuning.
+                            
+                            Our data augmentation strategies showed moderate improvements in reverse-query performance (up to 9% accuracy gain in description-to-person tasks), while maintaining forward-query accuracy – this highlights that targeted data augmentation can improve knowledge generalization. Our contrastive loss degraded performance, highlighting the challenges in multi-objective fine-tuning. 
+
                             </p>
                         </div>
                         
                         <div class="project-tech">
                             <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Item Response Theory</span>
-                            <span class="tech-tag">Transformer Models</span>
-                            <span class="tech-tag">Statistical Analysis</span>
+                            <span class="tech-tag">HuggingFace Transformers</span>
+                            <span class="tech-tag">OpenAI API</span>
+                            <span class="tech-tag">PyTorch</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" class="project-link">Research Paper</a>
-                            <a href="#" class="project-link">GitHub</a>
+                            <a href="src/rev_curse/rev_curse.pdf" class="project-link">Research Paper</a>
+                            <a href="https://github.com/tara-shukla/reversal_curse" class="project-link">GitHub</a>
                         </div>
                     </div>
                 </div>
