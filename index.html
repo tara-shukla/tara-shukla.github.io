@@ -226,20 +226,34 @@
                 
                 <div class="project-card">
                     <div class="project-image">
-                        <div class="project-placeholder">📚</div>
+                        <img src="src/senior_thesis/senior_thesis.png" alt="llm_judgment" style="width:100%;height:auto;border-radius:8px;">
+
                     </div>
                     <div class="project-content">
-                        <h3>Senior Thesis: LLM Evaluation using Item Response Theory</h3>
-                        <p>Leveraging Item Response Theory for Domain-Specific Evaluation of LLMs in Writing Assessment. Researches psychometric statistical evaluation strategies for LLM performance evaluation using cloud computing, transformer models, and Python.</p>
+                        <h3>Leveraging Item Response Theory for LLM Meta-Evaluation </h3>
+                        <p>Researches the application of psychometric statistical strategies to evaluate LLM judgment capabilities.</p>
+                        
+                        <button class="read-more-btn" onclick="toggleReadMore(this)">Read more</button>
+                        <div class="project-more" style="display:none;">
+                            <i> We rely on LLM judgment capabilities for a range of tasks across different domains, but they show inconsistent ability to evaluate the quality of text inputs. Current static benchmarking methods rely solely on accuracy metrics and are vulnerable to contamination: there’s a critical need for rigorous and interpretable evaluation frameworks for LLMs. </i>
+                            <p>
+                                My research addresses that need through applying a statistical framework called Item Response Theory (IRT) to evaluate LLM judgment capabilities via simultaneously modeling abilities and task difficulty characteristics. I assessed a wide set of models across three benchmark datasets (MT-Bench, JudgeBench, LLMBar) and essay grading tasks, using both pairwise comparative judgment and zero-shot pointwise numerical scoring. 
+                                IRT models (1PL, 2PL, and Graded Response Models) were then applied to analyze performance, estimating latent "judgment capability" (theta), item difficulty, and discrimination.
+
+                                I found that IRT-derived theta estimates provided greater differentiation between model capabilities than accuracy. Also, there is a weak correlation between benchmark performance, challenging the unidimensionality of LLM judgment. 
+                                My research provides methodological innovations for benchmark characterization and usage, and offers an interpretable framework for evaluating LLM-as-a-Judge. 
+                            </p>
+                        </div>
+                        
                         <div class="project-tech">
                             <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Item Response Theory</span>
-                            <span class="tech-tag">Transformer Models</span>
-                            <span class="tech-tag">Statistical Analysis</span>
+                            <span class="tech-tag">Statistical Modeling</span>
+                            <span class="tech-tag">HuggingFace API</span>
+                            <span class="tech-tag">LLM Fairness/Efficacy</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" class="project-link">Research Paper</a>
-                            <a href="#" class="project-link">GitHub</a>
+                            <a href="src/thesis/senior_thesis.pdf" class="project-link">Research Paper</a>
+                            <a href="https://github.com/tara-shukla/llm_judgment" class="project-link">GitHub</a>
                         </div>
                     </div>
                 </div>
@@ -279,6 +293,14 @@
                     <div class="project-content">
                         <h3>Grading Bias Analysis in LLM Essay Evaluations</h3>
                         <p>Investigation into algorithmic bias across 5 state-of-the-art LLMs using 25,000+ student essays. Implemented demographic-blind and demographic-aware testing methodologies to evaluate fairness in automated grading systems.</p>
+                        
+                        <button class="read-more-btn" onclick="toggleReadMore(this)">Read more</button>
+                        <div class="project-more" style="display:none;">
+                            <p>
+                                This project explores the application of Item Response Theory (IRT) to evaluate large language models (LLMs) in the context of writing assessment. By leveraging psychometric models, we can better understand the strengths and weaknesses of LLMs across different domains and tasks. The research includes extensive experiments with transformer architectures, statistical analysis, and cloud-based evaluation pipelines.
+                            </p>
+                        </div>
+                        
                         <div class="project-tech">
                             <span class="tech-tag">Python</span>
                             <span class="tech-tag">Statistical Analysis</span>
@@ -299,6 +321,14 @@
                     <div class="project-content">
                         <h3>Multilingual vs Monolingual Transformer Analysis</h3>
                         <p>Comparative analysis of multilingual and monolingual transformer models. Implemented experimental setups using Google Colab and Hugging Face libraries, fine-tuned models on GEC datasets, and evaluated performance metrics.</p>
+                        
+                        <button class="read-more-btn" onclick="toggleReadMore(this)">Read more</button>
+                        <div class="project-more" style="display:none;">
+                            <p>
+                                This project explores the application of Item Response Theory (IRT) to evaluate large language models (LLMs) in the context of writing assessment. By leveraging psychometric models, we can better understand the strengths and weaknesses of LLMs across different domains and tasks. The research includes extensive experiments with transformer architectures, statistical analysis, and cloud-based evaluation pipelines.
+                            </p>
+                        </div>
+                        
                         <div class="project-tech">
                             <span class="tech-tag">Python</span>
                             <span class="tech-tag">Hugging Face</span>
@@ -319,6 +349,14 @@
                     <div class="project-content">
                         <h3>Computer Vision Bias Analysis</h3>
                         <p>Analyzing co-occurrence bias in computer vision object detection. Investigated spurious correlations in COCO dataset using PyTorch and OpenCV, identifying systematic biases affecting model generalization.</p>
+                        
+                        <button class="read-more-btn" onclick="toggleReadMore(this)">Read more</button>
+                        <div class="project-more" style="display:none;">
+                            <p>
+                                This project explores the application of Item Response Theory (IRT) to evaluate large language models (LLMs) in the context of writing assessment. By leveraging psychometric models, we can better understand the strengths and weaknesses of LLMs across different domains and tasks. The research includes extensive experiments with transformer architectures, statistical analysis, and cloud-based evaluation pipelines.
+                            </p>
+                        </div>
+                        
                         <div class="project-tech">
                             <span class="tech-tag">PyTorch</span>
                             <span class="tech-tag">OpenCV</span>
@@ -339,6 +377,14 @@
                     <div class="project-content">
                         <h3>Computer Vision Bias Analysis</h3>
                         <p>Analyzing co-occurrence bias in computer vision object detection. Investigated spurious correlations in COCO dataset using PyTorch and OpenCV, identifying systematic biases affecting model generalization.</p>
+                        
+                        <button class="read-more-btn" onclick="toggleReadMore(this)">Read more</button>
+                        <div class="project-more" style="display:none;">
+                            <p>
+                                This project explores the application of Item Response Theory (IRT) to evaluate large language models (LLMs) in the context of writing assessment. By leveraging psychometric models, we can better understand the strengths and weaknesses of LLMs across different domains and tasks. The research includes extensive experiments with transformer architectures, statistical analysis, and cloud-based evaluation pipelines.
+                            </p>
+                        </div>
+                       
                         <div class="project-tech">
                             <span class="tech-tag">PyTorch</span>
                             <span class="tech-tag">OpenCV</span>
@@ -360,6 +406,14 @@
                     <div class="project-content">
                         <h3>Computer Vision Bias Analysis</h3>
                         <p>Analyzing co-occurrence bias in computer vision object detection. Investigated spurious correlations in COCO dataset using PyTorch and OpenCV, identifying systematic biases affecting model generalization.</p>
+                        
+                        <button class="read-more-btn" onclick="toggleReadMore(this)">Read more</button>
+                        <div class="project-more" style="display:none;">
+                            <p>
+                                This project explores the application of Item Response Theory (IRT) to evaluate large language models (LLMs) in the context of writing assessment. By leveraging psychometric models, we can better understand the strengths and weaknesses of LLMs across different domains and tasks. The research includes extensive experiments with transformer architectures, statistical analysis, and cloud-based evaluation pipelines.
+                            </p>
+                        </div>
+                        
                         <div class="project-tech">
                             <span class="tech-tag">PyTorch</span>
                             <span class="tech-tag">OpenCV</span>
@@ -373,14 +427,21 @@
                     </div>
                 </div>
 
-
-<div class="project-card">
+                <div class="project-card">
                     <div class="project-image">
                         <img src="src/compvis/bias_icon.png" alt="co-occurence bias" style="width:100%;height:auto;border-radius:8px;">
                     </div>
                     <div class="project-content">
                         <h3>Computer Vision Bias Analysis</h3>
                         <p>Analyzing co-occurrence bias in computer vision object detection. Investigated spurious correlations in COCO dataset using PyTorch and OpenCV, identifying systematic biases affecting model generalization.</p>
+                        
+                        <button class="read-more-btn" onclick="toggleReadMore(this)">Read more</button>
+                        <div class="project-more" style="display:none;">
+                            <p>
+                                This project explores the application of Item Response Theory (IRT) to evaluate large language models (LLMs) in the context of writing assessment. By leveraging psychometric models, we can better understand the strengths and weaknesses of LLMs across different domains and tasks. The research includes extensive experiments with transformer architectures, statistical analysis, and cloud-based evaluation pipelines.
+                            </p>
+                        </div>
+                        
                         <div class="project-tech">
                             <span class="tech-tag">PyTorch</span>
                             <span class="tech-tag">OpenCV</span>
@@ -396,9 +457,6 @@
 
             </div>
         </section>
-
-       
-
 
 
         <!-- Accomplishments Section
